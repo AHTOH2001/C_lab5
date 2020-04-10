@@ -49,9 +49,7 @@ int problem2()
 {
     char s[10000];
     int i;
-    node *root = NULL;// = (node *)malloc(sizeof(node));
-    // root->left = NULL;
-    // root->right = NULL;
+    node *root = NULL;
     FILE *fp = fopen("input.txt", "r");
     if (fp == NULL)
     {
@@ -93,7 +91,6 @@ int problem2()
     {
         printf("Level %d has %d nodes\n", i, ans[i]);
         i++;
-    }
-    //LeftOrder(root);
+    }    
     fclose(fp);
 }

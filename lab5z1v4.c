@@ -35,24 +35,6 @@ int PopBack(node **head, node **tale)
         (*head) = NULL;
     return zn;
 }
-// void PushFront(node *head, node *tale, int zn)
-// {
-//     node *Q = (node *)malloc(sizeof(node));
-//     Q->x = zn;
-//     if (tale == NULL)
-//     {
-//         Q->next = Q->prev = NULL;
-//         tale = Q;
-//         head = Q;
-//     }
-//     else
-//     {
-//         Q->next = head;
-// Q->prev = NULL;
-//         head->prev = Q;
-//         head = Q;
-//     }
-// }
 int PopFront(node **head, node **tale)
 {
     if ((*head) == NULL)
