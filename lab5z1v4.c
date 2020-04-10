@@ -5,7 +5,7 @@ typedef struct node
     struct node *next;
     struct node *prev;
 } node;
-void Pushack(node **head, node **tale, int zn)
+void PushBack(node **head, node **tale, int zn)
 {
     node *Q = (node *)malloc(sizeof(node));
     Q->x = zn;
