@@ -2,10 +2,10 @@
 
 int main()
 {
+    char c = '*';
     printf("Choose problem(0 to exit):\n");
     printf("1. problem 1 variant 4\n");
     printf("2. problem 2 variant 4\n");
-    char c = '*';
 
     while (c <= '0' || c >= '3')
     {

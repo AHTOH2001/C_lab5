@@ -25,10 +25,12 @@ void PushBack(node **head, node **tale, int zn)
 }
 int PopBack(node **head, node **tale)
 {
+    int zn;
+    node *Q;
     if ((*tale) == NULL)
         return err;
-    int zn = (*tale)->x;
-    node *Q = (*tale);
+    zn = (*tale)->x;
+    Q = (*tale);
     (*tale) = (*tale)->prev;
     free(Q);
     if ((*tale) == NULL)
@@ -37,10 +39,12 @@ int PopBack(node **head, node **tale)
 }
 int PopFront(node **head, node **tale)
 {
+    int zn;
+    node *Q;
     if ((*head) == NULL)
         return err;
-    int zn = (*head)->x;
-    node *Q = (*head);
+    zn = (*head)->x;
+    Q = (*head);
     (*head) = (*head)->next;
     free(Q);
     if ((*head) == NULL)
@@ -50,9 +54,9 @@ int PopFront(node **head, node **tale)
 int problem1()
 {
     node *masHead[100000], *masTale[100000], *ansHead, *ansTale;
-    int fminus = false;
+    int fminus = false,del,flag,i;
+    char c,s[10000];
     printf("Enter big integer in 10 number system\n");
-    char c;
     scanf("%c", &c);
     if (c == '-')
     {
@@ -70,16 +74,15 @@ int problem1()
         scanf("%c", &c);
     }
     printf("Enter number system\n");
-    char s[10000];
     scanf ("%s",s);
-    int del = stod(s);
+    del = stod(s);
     if (del < 2 || del > 10 || del==err)
     {
         printf("Invalid data\n");
         return 0;
     }
-    int flag = true;
-    int i = 0;
+    flag = true;
+    i = 0;
     while (flag)
     {
         int k = 0;

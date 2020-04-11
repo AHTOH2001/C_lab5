@@ -58,16 +58,17 @@ int problem2()
     }
     while (true)
     {
+        int k,res;
         fscanf(fp, "%s", s);
         if (s[0] == ' ')
             break;
-        int k = stod(s);
+        k = stod(s);
         if (k == err)
         {
             printf("Invalid data in file");
             return 0;
         }
-        int res = PushNode(k, root, 0);
+        res = PushNode(k, root, 0);
         if (res == err)
         {
             printf("Dublicate element");
@@ -93,4 +94,5 @@ int problem2()
         i++;
     }    
     fclose(fp);
+    return 0;
 }
